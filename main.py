@@ -1,6 +1,5 @@
 import os
 import datetime
-import uvloop
 
 from pyrogram import Client, filters, idle
 from dotenv import load_dotenv
@@ -42,7 +41,6 @@ async def ping_command(app, message):
     ms: float = (end - now).microseconds / 1000
     await a.edit(f"<blockquote>Pong! <code>{ms}ms</code></blockquote>")
 
-uvloop.install()
 app.start()
 print("[LOG] Bot started as @{}".format(app.me.first_name))
 idle()
