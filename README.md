@@ -14,6 +14,15 @@ This project implements a simple Telegram bot using the Pyrogram library. The bo
 - Docker
 - Docker Compose (optional)
 
+### Environment
+
+```env
+TELEGRAM_API_ID=
+TELEGRAM_API_HASH=
+TELEGRAM_BOT_TOKEN=
+```
+
+
 ## Docker Setup
 
 ### Dockerfile
