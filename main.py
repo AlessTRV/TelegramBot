@@ -18,13 +18,13 @@ app = Client(name="BOT", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 @app.on_message(~filters.me & filters.command("start") & filters.private)
 async def start_command(app, message):
     print("[LOG] Start command performed by {}".format(message.from_user.first_name))
-    await message.reply(f"Hello {message.from_user.mention}!")
+    await message.reply(f"Hello {message.from_user.mention}!\n\nUse /cmds for commands list")
 
 
-@app.on_message(~filters.me & filters.command("help") & filters.private)
-async def help_command(app, message):
-    print("[LOG] Help command performed by {}".format(message.from_user.first_name))
-    await message.reply(f"/help - Show this message\n/start - Start command\n/ping - Get the bot latency\n/dev - Developer info")
+@app.on_message(~filters.me & filters.command("cmds") & filters.private)
+async def cmds_command(app, message):
+    print("[LOG] Cmds command performed by {}".format(message.from_user.first_name))
+    await message.reply(f"/cmds - Show this message\n/start - Start command\n/ping - Get the bot latency\n/dev - Developer info")
 
 
 @app.on_message(~filters.me & filters.command("dev") & filters.private)
