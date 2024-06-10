@@ -13,12 +13,10 @@ coloredlogs.install(fmt="%(asctime)s - %(name)s - %(levelname)s - %(message)s", 
 logger.info("[+] Starting bot...")
 
 load_dotenv()
-api_id = 29695292
-bot_token = "7373220875:AAGvL2lJkvr-bXmUBA7sjzIVS6AOC-kWSJA"
-api_hash = "8b05ce00146edeeae7aafc4bea30e713"
-#api_id: int = int(os.getenv("TELEGRAM_API_ID"))
-#api_hash: str = os.getenv("TELEGRAM_API_HASH")
-#bot_token: str = os.getenv("TELEGRAM_BOT_TOKEN")
+
+api_id: int = int(os.getenv("TELEGRAM_API_ID"))
+api_hash: str = os.getenv("TELEGRAM_API_HASH")
+bot_token: str = os.getenv("TELEGRAM_BOT_TOKEN")
 
 app = Client(name="BOT", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
